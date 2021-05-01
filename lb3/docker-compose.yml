@@ -1,0 +1,10 @@
+Version: '3.8'
+
+services:
+
+  web:
+    image: ngnix
+    volumes: 
+      - ./website:/usr/share/nginx/html
+    ports:
+      - 420:80
