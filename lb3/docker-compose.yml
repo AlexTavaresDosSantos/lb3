@@ -6,22 +6,38 @@ services:
     build:
         context: .
         dockerfile: Dockerfile
+    container_name: Webserver
     ports:
-      - 5050:80
+      - 81:80
     volumes:
       - ./src:/var/www/html/
+ 
+  web2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Webserver2
+    volumes:
+      - ./web2/src:/var/www/html/
+    ports:
+      - 5051:80
+    restart: always
+     
 
   db:
      image: mysql
+     container_name: Datenbank
      command: --default-authentication-plugin=mysql_native_password
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: example 
-       MYSQL_DATABASE: db
-       MYSQL_USER: user
-       MYSQL_PASSWORD: pass
+       MYSQL_ROOT_PASSWORD: tbz123. 
+    
+
   adminer:
      image: adminer
+     container_name: Admirer
      restart: always
      ports:
-       - 6030:8080
+       - 8080:8080
+
+  
