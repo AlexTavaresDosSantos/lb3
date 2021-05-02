@@ -80,7 +80,7 @@ Im Rahmen des Moduls 300 müssen wir anhand von Docker ein Projekt umsetzen und 
         </body>
     </head>
     </html>
-![Screenshots](./lb3/Screenshots/web.png)
+![Screenshots](./Screenshots/web.png)
 
 >*Für die 2te Seite wurde folgendes html file mit folgendem inhalt erstellt. Dieses Index File kann aber beliebig angepasst werden.*
 
